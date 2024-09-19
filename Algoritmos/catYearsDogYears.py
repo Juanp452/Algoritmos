@@ -1,4 +1,7 @@
 def calculate_pet_years_dict(human_years):
+    '''programa que calcula la vida de un gato
+     y un perro con respecto a los años humanos
+     '''
     # Calcula los años de gato y perro
     if human_years == 1:
         cat_years = 15
