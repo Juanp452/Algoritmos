@@ -1,6 +1,6 @@
 import math
-"""modificar el tamaño de una foto
-de 16/9"""
+'''modificar el tamaño de una foto
+de 16/9'''
 
 
 def convert_to_16_9_resolution(x, y):
