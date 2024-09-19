@@ -1,4 +1,7 @@
 import math
+"""modificar el tamaño de una foto
+de 16/9"""
+
 
 def convert_to_16_9_resolution(x, y):
     # Calcula el nuevo ancho para la relación de aspecto 16:9
