@@ -1,3 +1,4 @@
+'''calcular la presion'''
 def total_pressure(M1, M2, m1, m2, V, T):
     # Convertir la temperatura a Kelvin
     T_kelvin = T + 273.15
