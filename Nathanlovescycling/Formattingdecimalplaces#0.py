@@ -1,3 +1,4 @@
+'''programa que redondea decimales'''
 def format_number(num):
     return f"{num:.2f}"
 
