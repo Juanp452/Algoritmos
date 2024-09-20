@@ -1,3 +1,6 @@
+'''programa que calcula el pago de
+la oferta de los mangos
+'''
 def mangoes_cost(quantity, price_per_mango):
     # Calcular cuántos mangos se pagan de acuerdo a la oferta
     groups_of_three = quantity // 3
