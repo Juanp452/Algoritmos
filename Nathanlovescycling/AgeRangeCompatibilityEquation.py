@@ -1,3 +1,6 @@
+'''calcular edad minima y maxima
+para estar con alguien'''
+
 import math
 
 
