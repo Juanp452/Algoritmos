@@ -1,3 +1,6 @@
+'''calcula el tiempo y
+puntos ganados
+'''
 def points_per_48(ppg, mpg):
     if mpg == 0:
         return 0
