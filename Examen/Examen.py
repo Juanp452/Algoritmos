@@ -81,10 +81,15 @@ def show_menu():
     instructions_text = font.render("Instrucciones", True, WHITE)
     scores_text = font.render("Puntajes", True, WHITE)
 
+    # Mostrar el título y las opciones
     screen.blit(title_text, (screen_width // 2 - title_text.get_width() // 2, screen_height // 4))
     screen.blit(start_text, (screen_width // 2 - start_text.get_width() // 2, screen_height // 2))
     screen.blit(instructions_text, (screen_width // 2 - instructions_text.get_width() // 2, screen_height // 2 + 40))
     screen.blit(scores_text, (screen_width // 2 - scores_text.get_width() // 2, screen_height // 2 + 80))
+
+    # Mostrar las instrucciones adicionales
+    controls_text = font.render("Con X atacas, con Z te defiendes, y con las flechas te mueves", True, WHITE)
+    screen.blit(controls_text, (screen_width // 2 - controls_text.get_width() // 2, screen_height // 2 + 120))
 
     pygame.display.flip()
 
@@ -93,7 +98,9 @@ def game_over():
     over_text = font.render("¡Has perdido!", True, WHITE)
     screen.blit(over_text, (screen_width // 2 - over_text.get_width() // 2, screen_height // 2))
     pygame.display.flip()
-    pygame.time.delay(2000)
+    pygame.time.delay(2000)  # Pausa de 2 segundos para mostrar el mensaje
+    pygame.quit()  # Cierra el juego después del mensaje
+    sys.exit()
 
 def level_up(player):
     player.upgrade()  # Mejora las estadísticas del jugador
@@ -138,8 +145,7 @@ def game_loop():
                         player_score += 10  # Incrementar puntaje por cada enemigo derrotado
 
         if player.health <= 0:
-            game_over()
-            return  # Regresar al menú después de perder
+            game_over()  # Llamar a la función game_over y salir del juego
 
         if len(enemies) == 0:
             difficulty += 1  # Aumentar la dificultad
